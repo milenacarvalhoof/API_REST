@@ -1,0 +1,49 @@
+CREATE TABLE tb_governador (
+id BIGINT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(255) NOT NULL,
+cpf VARCHAR(255) NOT NULL,
+logradouro VARCHAR(255) NOT NULL,
+numero VARCHAR(255) NOT NULL,
+complemento VARCHAR(255),
+cep VARCHAR(255) NOT NULL,
+telefone VARCHAR(255) NOT NULL,
+partido_id BIGINT NOT NULL,
+projetos_de_lei VARCHAR(255),
+processos BOOLEAN NOT NULL,
+fotos VARCHAR(255),
+FOREIGN KEY (partido_id) REFERENCES tb_partido(id)
+);
+
+
+CREATE TABLE tb_deputado (
+id BIGINT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(255) NOT NULL,
+cpf VARCHAR(255) NOT NULL,
+logradouro VARCHAR(255) NOT NULL,
+numero VARCHAR(255) NOT NULL,
+complemento VARCHAR(255),
+cep VARCHAR(255) NOT NULL,
+telefone VARCHAR(255) NOT NULL,
+partido_id BIGINT NOT NULL,
+projetos_de_lei VARCHAR(255),
+processos BOOLEAN NOT NULL,
+fotos VARCHAR(255),
+FOREIGN KEY (partido_id) REFERENCES tb_partido(id)
+);
+
+
+CREATE TABLE tb_senador (
+id BIGINT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(255) NOT NULL,
+cpf VARCHAR(255) NOT NULL,
+logradouro VARCHAR(255) NOT NULL,
+numero VARCHAR(255) NOT NULL,
+complemento VARCHAR(255),
+cep VARCHAR(255) NOT NULL,
+telefone VARCHAR(255) NOT NULL,
+partido_id BIGINT NOT NULL,
+projetos_de_lei VARCHAR(255),
+processos BOOLEAN NOT NULL,
+fotos VARCHAR(255),
+FOREIGN KEY (partido_id) REFERENCES tb_partido(id)
+);
